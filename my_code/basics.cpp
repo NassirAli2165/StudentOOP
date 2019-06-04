@@ -36,7 +36,7 @@ void inc_pass_ref(int& j) {
  * */
 void fill_vector(vector<int>& v, int n) {
     for(int i =0; i <= n; i++){
-        v[i] = i;
+        v.push_back(i);
     }
 }
 
