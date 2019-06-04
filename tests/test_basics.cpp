@@ -56,16 +56,18 @@ int main() {
     pos.x = 7;
     pos.y = 8;
     print_coords(pos);
-    
+
     char c = 'A';
+    cout << "passed 1\n";
     string s = "C++ strings are collections of chars.";
+    cout << "passed 2\n";
     s += '!';
     pull_apart_string(s);
     assert(c < s[4]);
     c++;
     cout << "c = " << c << endl;
     cout << "Int val of c = " << (int)c << endl;
-    
+
     say("Goodbye!");
     return 0;
 }
