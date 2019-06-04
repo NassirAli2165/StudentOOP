@@ -6,8 +6,8 @@
 //  Copyright © 2019 Nassir Ali. All rights reserved.
 //
 
-#ifndef basics_hpp
-#define basics_hpp
+#ifndef basics_h
+#define basics_h
 
 #include <stdio.h>
 #include <string>
@@ -31,4 +31,4 @@ int sum2(int n);
 void pull_apart_string(std::string s);
 void say(std::string s);
 
-#endif /* basics_hpp */
+#endif /* basics_h */
