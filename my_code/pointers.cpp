@@ -24,8 +24,7 @@ void inc_by_value(int n) {
  * Increment n.
  * */
 void inc_with_pointer(int* iptr) {
-    int i_norm = *iptr;
-    i_norm++;
+    *iptr += 1;
 }
 
 
