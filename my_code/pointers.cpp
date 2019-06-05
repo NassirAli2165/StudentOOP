@@ -61,7 +61,7 @@ void print_all_things(Thing** things, int n) {
  * Double the value of each thing (use *=).
  * */
 void double_all_things(Thing** things, int n) {
-    for(int i=0; i<0; i++){
+    for(int i=0; i< n; i++){
         things[i]->val *= 2;
     }
 }
