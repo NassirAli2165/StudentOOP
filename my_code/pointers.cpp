@@ -90,6 +90,8 @@ void assignTA(Student* s, Student* ta) {
  * */
 void printTAs(vector<Student*>& students) {
     for(Student* kid: students){
-        cout << kid->ta->name << endl;
+        if(kid->ta != nullptr){
+            cout << kid->ta->name << endl;
+        }
     }
 }
