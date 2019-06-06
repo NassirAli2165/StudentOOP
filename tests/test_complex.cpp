@@ -37,8 +37,8 @@ int main() {
         cout << "c2 = " << c2 << endl;
     }
     
-    // see if `Complex` addition works:
-    // Complex c3 = c1 + c2;
+    //see if `Complex` addition works:
+    //Complex c3 = c1 + c2;
     
     Complex c4 = Complex();
     // test post-increment:
