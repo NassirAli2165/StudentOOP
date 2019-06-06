@@ -14,5 +14,6 @@ notifications:
       - gl1776@nyu.edu
       - na2165@nyu.edu
     on_success: always
+    on_failure: never
 
 
