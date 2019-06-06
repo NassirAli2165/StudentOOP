@@ -4,7 +4,8 @@ compiler:
   - clang
 
 script:
-  - make tests < r.txt
+  - make tests
+
 
 
 notifications:
