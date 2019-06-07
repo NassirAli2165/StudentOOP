@@ -49,7 +49,7 @@ std::ostream& operator<<(std::ostream& os, const WReading& wr){
 }
 
 std::ostream& operator<<(std::ostream& os, const Date& date){
-    os << date.day << "/" << date.month << "/" << date.year;
+    os << date.month << "/" << date.day << "/" << date.year;
     return os;
 }
 
