@@ -32,6 +32,10 @@ void Weather::set_rating(int new_rating){
     rating = new_rating;
 }
 
+void Weather::add_reading(WReading w){
+    wreadings.push_back(w);
+}
+
 string Weather::get_name() const {
     return station_nm;
 }
