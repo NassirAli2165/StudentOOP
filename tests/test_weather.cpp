@@ -33,7 +33,7 @@ int main() {
     Weather irkutsk = Weather("Irkutsk", GPS(46.3, 67.2));
     
     string filenm;
-    cout << "Input the name of the new readings file:\n";
+    cout << "Input the name of the new readings file: ";
     cin >> filenm;
     
     get_wreadings(filenm, irkutsk);

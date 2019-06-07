@@ -21,7 +21,10 @@ station_nm(nm), my_loc(loc) {
 
 ostream& operator<< (std::ostream& os, const Weather& w){
     os << "Name: " << w.station_nm << endl;
-    os << "Latitude: " << w.my_loc.latitude << ", Longitude: " << w.my_loc.longitude << ", Rating: " << w.rating;
+    os << "Latitude: " << w.my_loc.latitude << ", Longitude: " << w.my_loc.longitude << ", Rating: " << w.rating << endl;
+    for(WReading reading: w.wreadings){
+        os << reading << endl;
+    }
     return os;
 }
 int Weather::get_rating() const {
@@ -39,3 +42,14 @@ void Weather::add_reading(WReading w){
 string Weather::get_name() const {
     return station_nm;
 }
+
+std::ostream& operator<<(std::ostream& os, const WReading& wr){
+    os << "Date: " << wr.date << "; Temp: " << wr.temperature << "; Humidity: " << wr.humidity << "; Windspeed: " << wr.windspeed;
+    return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const Date& date){
+    os << date.day << "/" << date.month << "/" << date.year;
+    return os;
+}
+
