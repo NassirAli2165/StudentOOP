@@ -19,7 +19,7 @@ int main() {
 //    Complex c1;
 //    // get a complex from stdin:
 //    cin >> c1;
-    Complex c1(12,13);
+    Complex c1(1,1);
     if(!cin)
     {
         cerr << "Bad input format\n";
