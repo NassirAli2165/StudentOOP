@@ -6,10 +6,9 @@
 //  Copyright © 2019 Nassir Ali. All rights reserved.
 //
 
-#ifndef complex_h
-#define complex_h
+#ifndef COMPLEX_H
+#define COMPLEX_H
 
-#include <stdio.h>
 
 class Complex {
     friend std::ostream& operator<< (std::ostream& os, const Complex& c);
@@ -19,7 +18,6 @@ class Complex {
      * The equality operator should be a friend since it is binary
      * and symmetrical.
      * */
-    friend bool operator== (const Complex& c1, const Complex& c2);
     
 public:
     /*
@@ -91,9 +89,18 @@ public:
      * */
     Complex operator-(const Complex& c);
     
+    /*
+     * Let's do multiplication by a scalar:
+     * */
+    Complex operator*(const int i);
+    
 private:
     double real;
     double imag;
 };
 
-#endif /* complex_h */
+
+bool operator== (const Complex& c1, const Complex& c2);
+bool operator!= (const Complex& c1, const Complex& c2);
+
+#endif

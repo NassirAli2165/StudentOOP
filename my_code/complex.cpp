@@ -14,7 +14,7 @@
 using namespace std;
 
 bool operator== (const Complex& c1, const Complex& c2) {
-    return ((c1.real == c2.real) && (c1.imag == c2.imag));
+    return ((c1.get_imag() == c2.get_imag()) && (c1.get_real() == c2.get_real()));
 }
 
 ostream& operator<< (ostream& os, const Complex& c) {
@@ -48,7 +48,7 @@ Complex::operator bool() const {
 }
 
 Complex& Complex::operator++() {
-    ++real;
+    real++;
     return (*this);
 }
 
