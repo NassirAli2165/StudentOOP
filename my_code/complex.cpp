@@ -48,7 +48,7 @@ Complex::operator bool() const {
 }
 
 Complex& Complex::operator++() {
-    real++;
+    ++real;
     return (*this);
 }
 
