@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const bool DEBUG = true;
+const bool d_bug = true;
 
 
 int main() {
@@ -25,7 +25,7 @@ int main() {
         cerr << "Bad input format\n";
         exit(1);
     }
-    if(DEBUG)
+    if(d_bug)
     {
         cout << "c1 = " << c1 << endl;
     }
@@ -33,7 +33,7 @@ int main() {
     Complex c2{43.2, 58.9};
     assert(c2.get_real() == 43.2);
     assert(c2.get_imag() == 58.9);
-    if(DEBUG)
+    if(d_bug)
     {
         cout << "c2 = " << c2 << endl;
     }
