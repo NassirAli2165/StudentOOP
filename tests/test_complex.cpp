@@ -14,7 +14,6 @@ using namespace std;
 
 const bool d_bug = true;
 
-
 int main() {
 //    cout << "Input a complex number:\n";
 //    Complex c1;
