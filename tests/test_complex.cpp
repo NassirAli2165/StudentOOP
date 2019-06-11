@@ -41,7 +41,7 @@ int main() {
     Complex c3 = c1 + c2;
     assert(c3.get_real() > 43.2);
     // see if `Complex` subtraction works:
-    Complex c3 -= c2;
+    c3 -= c2;
     assert(c3 == c1);
 
     Complex c4 = Complex();
