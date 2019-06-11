@@ -16,10 +16,11 @@ const bool d_bug = true;
 
 
 int main() {
-    cout << "Input a complex number:\n";
-    Complex c1;
-    // get a complex from stdin:
-    cin >> c1;
+//    cout << "Input a complex number:\n";
+//    Complex c1;
+//    // get a complex from stdin:
+//    cin >> c1;
+    Complex c1 = Complex(1,1);
     if(!cin)
     {
         cerr << "Bad input format\n";
