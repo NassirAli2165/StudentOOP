@@ -37,7 +37,7 @@ MyVec::MyVec(const MyVec& v2) {
 }
 
 MyVec::~MyVec() {
-    delete data;
+    delete[] data;
 }
 
 MyVec& MyVec::operator=(const MyVec& v2) {
