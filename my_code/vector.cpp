@@ -22,9 +22,9 @@ void print_vector(const MyVec& v) {
 
 
 MyVec::MyVec() {
-    data = new int[];
+    data = new int[DEF_CAPACITY];
     sz = 0;
-    capacity = 10;
+    capacity = DEF_CAPACITY;
 }
 
 MyVec::MyVec(const MyVec& v2) {
