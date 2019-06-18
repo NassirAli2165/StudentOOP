@@ -37,12 +37,12 @@ MyVec::MyVec(const MyVec& v2) {
 }
 
 MyVec::~MyVec() {
-    delete[] data;
+    delete data;
 }
 
 MyVec& MyVec::operator=(const MyVec& v2) {
     if(this == &v2){ return *this; }
-    delete[] data;
+    delete data;
     capacity = v2.capacity;
     sz = v2.sz;
     data = new int[capacity];
