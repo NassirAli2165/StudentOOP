@@ -22,7 +22,7 @@ void print_vector(const MyVec& v) {
 
 
 MyVec::MyVec() {
-    data = new int();
+    data = new int[];
     sz = 0;
     capacity = 10;
 }
