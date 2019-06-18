@@ -12,19 +12,28 @@
 using namespace std;
 
 void print_vector(const MyVec& v) {
+    cout << "[";
+    for(int i = 0; i < v.size(); i++){
+        cout << v[i];
+        if(i != (v.size() - 1)){ cout <<  ",";}
+    }
+    cout << "]" << endl;
 }
 
 
 MyVec::MyVec() {
     data = new int();
     sz = 0;
-    capacity = 0;
+    capacity = DEF_CAPACITY;
 }
 
 MyVec::MyVec(const MyVec& v2) {
-    data = new int(*v2.data);
-    sz = v2.sz;
     capacity = v2.capacity;
+    sz = v2.sz;
+    data = new int[capacity];
+    for(int i=0; i < sz; i++){
+        data[i] = v2[i];
+    }
 }
 
 MyVec::~MyVec() {
@@ -34,11 +43,12 @@ MyVec::~MyVec() {
 MyVec& MyVec::operator=(const MyVec& v2) {
     if(this == &v2){ return *this; }
     delete data;
-    sz = 0;
-    capacity = 0;
-    data = new int(*v2.data);
-    sz = v2.sz;
     capacity = v2.capacity;
+    sz = v2.sz;
+    data = new int[capacity];
+    for(int i=0; i < sz; i++){
+        data[i] = v2[i];
+    }
     return *this;
 }
 
@@ -59,13 +69,9 @@ bool operator==(MyVec& v1, MyVec& v2) {
  * Puts an element at the back of a vector.
  * */
 void MyVec::push_back(int val) {
-    if(capacity < 10){
-    data[capacity] = val;
-    capacity += 1;
-    }
-    else {
-        cout << "Error: Unable to add value as capacity has been reached!" << endl;
-    }
+    data[sz] = val;
+    sz += 1;
+    if(sz == capacity) { capacity *= 2;}
 }
 
 /*
