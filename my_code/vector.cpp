@@ -24,7 +24,7 @@ void print_vector(const MyVec& v) {
 MyVec::MyVec() {
     data = new int();
     sz = 0;
-    capacity = DEF_CAPACITY;
+    capacity = 10;
 }
 
 MyVec::MyVec(const MyVec& v2) {
