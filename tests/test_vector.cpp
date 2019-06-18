@@ -6,7 +6,6 @@
 //  Copyright © 2019 Nassir Ali. All rights reserved.
 //
 
-#include <stdio.h>
 #include <cassert>
 #include <iostream>
 #include "../my_code/vector.h"
