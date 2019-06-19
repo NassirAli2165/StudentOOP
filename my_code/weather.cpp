@@ -100,16 +100,6 @@ void Image::copy_fields(const Image& img2) {
 }
 
 
-/*
- * Setting `display() = 0` here makes this an abstract
- * class that can't be implemented.
- * */
-string Image::display(std::string s) {
-    return "Displaying image " + s;
-}
-
-
-
 Date::Date(int d, int m, int y) {
     day = d;
     month = m;
@@ -119,4 +109,31 @@ Date::Date(int d, int m, int y) {
 
 double WReading::get_tempF() {
     return (temperature * C_TO_F) + 32;
+}
+
+void Image::display(){
+    cout << "Base" << endl;
+}
+
+void Jpeg::display(){
+    cout << "Jpeg" << endl;
+}
+
+void Gif::display(){
+    cout << "Gif" << endl;
+}
+
+void  Png::display(){
+    cout << "Png" << endl;
+}
+
+Image* WReading::get_image() const {
+    return image;
+}
+
+void Weather::display_images() const{
+    for(WReading reading: wreadings){
+        Image* image = reading.get_image();
+        image->display();
+    }
 }
