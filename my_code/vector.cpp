@@ -88,8 +88,7 @@ void MyVec::push_back(int val) {
  * It returns the i-th element.
  * */
 int MyVec::operator[](int i) const {
-    int j = data[i];
-    return j;
+    return data[i];
 }
 
 /*
