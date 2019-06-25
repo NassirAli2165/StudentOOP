@@ -21,6 +21,23 @@ void print_vector(const MyVec& v) {
 }
 
 
+MyVec::MyVec(int sz, int val) : sz{sz} {
+    data = new int[max(DEF_CAPACITY, 2 * sz)];
+    capacity = 2 * sz;
+    for(int i=0; i < sz; i++){
+        data[i] = val;
+    }
+}
+
+MyVec::Iterator MyVec::begin() const {
+    return MyVec::Iterator(data);
+}
+
+MyVec::Iterator MyVec::end() const {
+    return MyVec::Iterator(data+sz);
+}
+
+
 MyVec::MyVec() {
     data = new int[DEF_CAPACITY];
     sz = 0;
