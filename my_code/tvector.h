@@ -60,7 +60,7 @@ public:
     void push_back(DATA val) {
     if(sz == capacity) {
         capacity *= 2;
-        int* new_data = new DATA[capacity];
+        DATA* new_data = new DATA[capacity];
         for(int i =0; i < sz; i++){
             new_data[i] = data[i];
         }
