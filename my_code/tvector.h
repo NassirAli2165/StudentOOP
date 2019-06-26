@@ -24,7 +24,7 @@ public:
         capacity = DEF_CAPACITY;
     }
     
-    MyVec(int sz, DATA val=0){
+    MyVec(int sz, DATA val=0):sz(sz){
         data = new DATA[std::max(DEF_CAPACITY, 2 * sz)];
         capacity = 2 * sz;
         for(int i=0; i < sz; i++){
@@ -45,7 +45,7 @@ public:
         delete[] data;
     }
     
-    MyVec& operator=(const MyVec<DATA>& v2) {
+    MyVec<DATA>& operator=(const MyVec<DATA>& v2) {
         if(this == &v2){ return *this; }
         delete[] data;
         capacity = v2.capacity;
