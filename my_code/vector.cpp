@@ -97,7 +97,6 @@ void MyVec::push_back(int val) {
     }
     data[sz] = val;
     sz ++;
-
 }
 
 /*

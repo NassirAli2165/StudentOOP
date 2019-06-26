@@ -9,8 +9,6 @@
 #ifndef vector_hpp
 #define vector_hpp
 
-#include <stdio.h>
-
 const int DEF_CAPACITY = 10;
 
 class MyVec {
